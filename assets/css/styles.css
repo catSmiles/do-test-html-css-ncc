@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+
+:root {
+  /*========== Colors ==========*/
+  --black: #000;
+  --light-black: #3e3e3e;
+  --white: #fff;
+  --gray: #aaa;
+  --lightest-gray: #efefef;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Roboto', sans-serif;
+  --h2-font-size: 1.5rem; /* 24px */
+  --h3-font-size: 1.125rem; /* 18px */
+  --normal-font-size: 1rem; /* 16px */
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-bold);
+  color: var(--black);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.section {
+  padding: 0 129px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=============== LAYOUT ===============*/
+
+.grid {
+  display: grid;
+}
+
+/*=============== CONTENT PAGE ===============*/
+
+.content-page {
+  position: absolute;
+  margin-left: 150px;
+}
+
+/*=============== HEADER ===============*/
+
+.header {
+  padding: 30px 0;
+}
+
+/*=============== CONTENT TOP ===============*/
+
+.content-top {
+  background-color: var(--lightest-gray);
+  padding: 38px 269px;
+  text-align: center;
+}
+
+.content-top__title {
+  line-height: 21px;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.content-top__text {
+  line-height: 19px;
+}
+
+/*=============== CONTENT BOTTOM ===============*/
+.content-bottom {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin: 40px 0 182px 0;
+}
+
+.content-bottom .title {
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  margin-bottom: 18px;
+}
+
+.content-bottom .info__img {
+  float: left;
+  margin-right: 16px;
+}
+.content-bottom .info__text {
+  line-height: 19px;
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  margin: 30px 0;
+}
+
+.footer > p {
+  line-height: 19px;
+  color: #3e3e3e;
+}
+
+/*=============== SIDEBAR ===============*/
+
+.sidebar {
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+}
+
+.sidebar-item.active,
+.sidebar-item.active a {
+  color: var(--white);
+}
+
+.sidebar-item a {
+  color: #aaa;
+}
+
+.sidebar-item {
+  padding: 14px 16px 11px;
+  border-bottom: 1px solid #aaa;
+  transition: all 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #5c5c5c;
+}
+
+.sidebar-item:hover a {
+  color: var(--white);
+}
